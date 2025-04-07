@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../assets/TodoApp.css'; // นำเข้าฟайл CSS ของเรา
+import '../assets/TodoApp.css'; 
 
 type Todo = {
   id: number;
@@ -70,8 +70,8 @@ const TodoApp: React.FC = () => {
   };
 
   return (
-    <div className="container my-4">
-      <h2 className="text-center mb-4">📝 Todo List</h2>
+    <div className="container my-4 w-25">
+      <h2 className="text-center mb-4">📝 To do list</h2>
       <div className="d-flex mb-4">
         <input
           className="form-control me-2"
@@ -83,7 +83,7 @@ const TodoApp: React.FC = () => {
           {editId !== null ? 'อัปเดต' : 'เพิ่ม'}
         </button>
       </div>
-
+  
       <ul className="list-group">
         {todos.map(todo => (
           <li key={todo.id} className="list-group-item d-flex justify-content-between align-items-center">
@@ -95,7 +95,11 @@ const TodoApp: React.FC = () => {
                 className="form-check-input me-2"
               />
               <span
-                style={{ textDecoration: todo.completed ? 'line-through' : '' }}
+                style={{
+                  textDecoration: todo.completed ? 'line-through' : '',
+                  wordWrap: 'break-word', // Ensures long text wraps
+                  whiteSpace: 'normal' // Allows wrapping of the text
+                }}
                 className="flex-grow-1"
               >
                 {todo.text}
@@ -120,6 +124,7 @@ const TodoApp: React.FC = () => {
       </ul>
     </div>
   );
+  
 };
 
 export default TodoApp;

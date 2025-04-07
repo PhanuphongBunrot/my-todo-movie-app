@@ -1,0 +1,39 @@
+/* TodoApp.css */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #343a40;
+    font-size: 2rem;
+  }
+  
+  input[type="text"] {
+    border: 2px solid #ced4da;
+  }
+  
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+  
+  button {
+    border-radius: 5px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .list-group-item {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
